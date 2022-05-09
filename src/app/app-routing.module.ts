@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { PrototypeComponent } from './prototype/prototype/prototype.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: AppComponent },
+  // { path: '', pathMatch: 'full', component: AppComponent },
   {
     path: 'prototype',
     loadChildren: () =>

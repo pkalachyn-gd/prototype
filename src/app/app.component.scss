@@ -8,4 +8,8 @@ menu {
         display: inline-block;
         margin: 0 1em 0 0;
     }
+
+    button:cdk-keyboard-focus {
+        outline: 2px solid cornflowerblue;
+    }
 }
