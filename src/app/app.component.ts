@@ -1,15 +1,12 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
 import {
   AfterViewInit,
-  ChangeDetectorRef,
   Component,
-  ElementRef,
-  NgZone,
   OnDestroy,
   QueryList,
-  ViewChild,
   ViewChildren,
 } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -17,18 +14,13 @@ import {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnDestroy, AfterViewInit {
-  @ViewChildren('btnPrototype, btnDashboard')
-  menuButtons!: QueryList<HTMLButtonElement>;
+  @ViewChildren(RouterLink) menuButtons!: QueryList<HTMLElement>;
 
-  constructor(
-    private focusMonitor: FocusMonitor,
-    private cdr: ChangeDetectorRef,
-    private ngZone: NgZone
-  ) {}
+  constructor(private focusMonitor: FocusMonitor) {}
 
   ngAfterViewInit() {
     this.menuButtons.forEach((menuButton) =>
-      this.focusMonitor.monitor(menuButton).subscribe(console.log)
+      this.focusMonitor.monitor(menuButton)
     );
   }
 

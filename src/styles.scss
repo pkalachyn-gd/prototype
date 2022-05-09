@@ -9,10 +9,10 @@ body {
     display: block;
     overflow: auto;
     height: 100vh;
-    
+
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-button:focus {
-    outline: none;
+*:cdk-keyboard-focus {
+    outline: 2px solid cornflowerblue;
 }
