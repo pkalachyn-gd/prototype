@@ -1,12 +1,11 @@
-<menu #menu>
-  <li>
-    <button #btnPrototype routerLink="prototype">Prototype</button>
-  </li>
-  <li>
-    <button #btnDashboards routerLink="dashboards">Dashboards</button>
-  </li>
-  <li>
-    <a routerLink="/">Home</a>
+<menu *ngIf="menuItems$ | async as menuItems">
+  <li *ngFor="let menuItem of menuItems">
+    <ng-container *ngIf="menuItem.isButton; else anchor">
+      <button [routerLink]="menuItem.routerLink">{{menuItem.label}}</button>
+    </ng-container>
+    <ng-template #anchor>
+      <a [routerLink]="menuItem.routerLink">{{menuItem.label}}</a>
+    </ng-template>
   </li>
 </menu>
 
