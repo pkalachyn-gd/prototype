@@ -1,2 +1,10 @@
 <h2 class="placeholder-heading">Mockup Footer</h2>
 Grid Dynamics &copy; 2022 | <a href="mailto:pkalachyn@griddynamics.com">Piotr Kalachyn</a>
+
+<ul *ngIf="links$ | async as links; else loadingLinks">
+    <li *ngFor="let link of links"><a [href]="link.url">{{ link.label }}</a></li>
+</ul>
+
+<ng-template #loadingLinks>
+    <p>loading...</p>
+</ng-template>
