@@ -1,19 +1,13 @@
 import { Injectable } from '@angular/core';
-import {Observable, of } from 'rxjs';
-import {delay } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
+import { LINKS_MOCK } from './links-mock.model';
 
-const LINKS_MOCK = [
-  {label: 'Facebook', url: 'https://facebook.com'},
-  {label: 'Grid Dynamics', url: 'https://griddynamics.com'},
-];
-
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class LinksService {
-  constructor() { }
+  constructor() {}
 
-  getLinks(): Observable<{[key: string]: string}[]> {
+  getLinks(): Observable<{ [key: string]: string }[]> {
     return of(LINKS_MOCK).pipe(delay(3333));
   }
 }

@@ -1,0 +1,23 @@
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+}
+
+p.loading-links {
+  opacity: 0;
+  animation: fade-in-out 1s infinite linear;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  38% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
