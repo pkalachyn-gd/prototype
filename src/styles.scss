@@ -53,3 +53,19 @@ button {
     border-radius: $unit / 4;
     padding: 0.2 * $unit 0.4 * $unit;
 }
+
+button {
+    background-color: $color-btn-background;
+}
+
+button.primary {
+    background-color: $color-btn-background;;
+}
+
+button.secondary {
+    background-color: greenyellow;
+}
+
+.full-width {
+    width: 100%;
+}
