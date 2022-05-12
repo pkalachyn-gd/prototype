@@ -9,6 +9,7 @@ import { MockupHeaderSunComponent } from './mockup-header-sun/mockup-header-sun.
 import { MockupHeaderMoonComponent } from './mockup-header-moon/mockup-header-moon.component';
 import { SharedModule } from '../shared/shared.module';
 import { MockupHeroComponent } from './mockup-hero/mockup-hero.component';
+import { LinksService } from './links.service';
 
 @NgModule({
   declarations: [
@@ -21,5 +22,6 @@ import { MockupHeroComponent } from './mockup-hero/mockup-hero.component';
     MockupHeroComponent,
   ],
   imports: [CommonModule, MockupRoutingModule, SharedModule],
+  providers: [LinksService]
 })
 export class MockupModule {}

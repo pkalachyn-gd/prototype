@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   host: {class: 'placeholder placeholder-row'}
 })
 export class MockupHeaderComponent implements OnInit {
-
-  constructor() { }
-
+  numRep = 123;
+  constructor() { 
+  }
+  
   ngOnInit(): void {
+    setTimeout(() => this.numRep += 120, 3000);
   }
 
 }
