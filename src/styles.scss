@@ -1,23 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'app/shared/styles/constants';
 body {
-    margin: 0;
-    padding: 0;
-    font-size: medium;
-    font-weight: normal;
-    font-family: sans-serif;
-    background-color: #eee;
-    display: block;
-    overflow: auto;
-    height: 100vh;
-
+  margin: 0;
+  padding: 0;
+  font-size: medium;
+  font-weight: normal;
+  font-family: sans-serif;
+  background-color: #eee;
+  display: block;
+  overflow: auto;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  outline: none;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; outline: none; }
+html,
+body {
+    height: 100vh;
+}
 
-a, button {
+a,
+button {
   outline: none;
 }
 
-*:cdk-keyboard-focus {
-    box-shadow: 1px 1px 3px 6px red;
+.cdk-keyboard-focused {
+  box-shadow: 0px 0px 1px 6px red;
+}
+
+.placeholder {
+    position: relative;
+    display: block;
+    border: 1px solid #70809080;
+    background-color: #6495ed33;
+    border-radius: 4px;
+    padding: $unit;
+    box-sizing: border-box;
+    margin: $unit;
+    flex-grow: 1; 
+    text-align: center;
+}
+
+.placeholder-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.placeholder-heading {
+    position: absolute;
+    left: $unit;
+    top: -2 * $unit;
+    border: 1px solid #708090;
+    background-color: aliceblue;
+    border-radius: $unit / 4;
+    padding: 0.2 * $unit 0.4 * $unit;
 }

@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { PrototypeComponent } from './prototype/prototype/prototype.component';
 
 const routes: Routes = [
   // { path: '', pathMatch: 'full', component: AppComponent },
@@ -14,6 +12,11 @@ const routes: Routes = [
     path: 'dashboards',
     loadChildren: () =>
       import('./dashboards/dashboards.module').then((m) => m.DashboardsModule),
+  },
+  {
+    path: 'mockup',
+    loadChildren: () =>
+      import('./mockup/mockup.module').then((m) => m.MockupModule),
   },
 ];
 
