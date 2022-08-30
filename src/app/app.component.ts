@@ -12,6 +12,7 @@ const MENU_ITEMS: MenuItem[] = [
   { label: 'Home', routerLink: '/', isButton: false },
   { label: 'Prototype', routerLink: 'prototype', isButton: true },
   { label: 'Dashboards', routerLink: 'dashboards', isButton: true },
+  { label: 'Catalog', routerLink: '/shop/catalog', isButton: false },
 ];
 
 @Component({

@@ -18,6 +18,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./mockup/mockup.module').then((m) => m.MockupModule),
   },
+  {
+    path: 'shop',
+    loadChildren: () =>
+      import('./shop/shop.module').then((m) => m.ShopModule),
+  },
 ];
 
 @NgModule({

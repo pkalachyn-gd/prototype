@@ -1,0 +1,2 @@
+<h3 class="placeholder-heading">catalog</h3>
+<a [routerLink]="good.guid" *ngFor="let good of goods$ | async">{{ good.name }}</a>
