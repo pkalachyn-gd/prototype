@@ -45,9 +45,11 @@ button {
 }
 
 .placeholder-heading {
+    margin: 0;
     position: absolute;
-    left: $unit;
-    top: -2 * $unit;
+    left: 0.5 * $unit;
+    top: 0;
+    transform: translate(0, -50%);
     border: 1px solid #708090;
     background-color: aliceblue;
     border-radius: $unit / 4;
